@@ -145,7 +145,7 @@ neuronal-classifier-mea/
 ## Installation
 
 ```bash
-git clone https://github.com/danieleferrante/neuronal-classifier-mea.git
+git clone https://github.com/sharkolsdj/neuronal-classifier-mea.git
 cd neuronal-classifier-mea
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -187,7 +187,7 @@ jupyter>=1.0
 
 **Daniele Ferrante, Ph.D.**  
 Neuroscientist | Applied AI Developer  
-[LinkedIn](https://www.linkedin.com/in/daniele-ferrante-60bb8381/) | [GitHub](https://github.com/danieleferrante)
+[LinkedIn](https://www.linkedin.com/in/daniele-ferrante-60bb8381/) | [GitHub](https://github.com/sharkolsdj)
 
 *Background note: the feature engineering in this project draws directly on 10 years of hands-on patch-clamp and MEA electrophysiology across three European research institutions — in particular the period at the University of Genova (Baldelli lab) and the Italian Institute of Technology (Benfenati lab, Genova), where I characterised the electrophysiology of excitatory and inhibitory hippocampal neurons and their synaptic properties in PRRT2-deficient, SynIIKO, and REST/NRSF-manipulated preparations. The feature set used here (ISI statistics, spike shape parameters, AP threshold, adaptation index) is built from the same conceptual vocabulary I used to interpret raw HEKA traces during that period. The model's confusion matrix is benchmarked against the same intuitive classification I performed manually for years.*
 
