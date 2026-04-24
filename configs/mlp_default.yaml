@@ -1,0 +1,29 @@
+# Hyperparameters for NeuronalMLP — excitatory vs inhibitory classification
+# Tuned for the Allen Brain Cell Atlas dataset (~1500 cells, ~15 features)
+
+model:
+  type: NeuronalMLP
+  n_classes: 2           # 2 for Exc/Inh; set to 6 for subtype classification
+  dropout_1: 0.3
+  dropout_2: 0.2
+
+training:
+  n_splits: 5            # stratified k-fold CV
+  n_epochs: 150
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 15           # early stopping
+  random_seed: 42
+
+data:
+  sampling_rate_hz: 20000
+  spike_threshold_mv: -20.0
+  nan_imputation: median   # median imputation for missing features
+  scale: standard          # StandardScaler before model input
+
+evaluation:
+  primary_metric: macro_f1
+  label_names:
+    - excitatory
+    - inhibitory
